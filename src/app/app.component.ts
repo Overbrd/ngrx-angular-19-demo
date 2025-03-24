@@ -1,5 +1,4 @@
 import { Component, inject, OnInit } from '@angular/core';
-import { RouterOutlet } from '@angular/router';
 import { BookCollectionComponent } from './book-collection/book-collection.component';
 import { BookListComponent } from './book-list/book-list.component';
 import { Store } from '@ngrx/store';
@@ -11,7 +10,6 @@ import { CommonModule } from '@angular/common';
 @Component({
   selector: 'app-root',
   imports: [
-    RouterOutlet,
     BookListComponent,
     BookCollectionComponent,
     CommonModule,

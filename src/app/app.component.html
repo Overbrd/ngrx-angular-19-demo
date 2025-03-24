@@ -1,0 +1,24 @@
+<style>
+.column {
+  float: left;
+  width: 50%;
+    
+}
+
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+
+}
+</style>
+<div class="row">
+<div class="column"><h2>Books</h2>
+<app-book-list class="book-list" [books]="(books$ | async)!" (add)="onAdd($event)"></app-book-list></div>
+<div class="column"><h2>My Collection</h2>
+<app-book-collection class="book-collection" [books]="(bookCollection$ | async)!" (remove)="onRemove($event)">
+</app-book-collection></div>
+</div>
+
+
+
